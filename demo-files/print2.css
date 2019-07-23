@@ -1,0 +1,32 @@
+
+
+@page { size:10.5in 11in; margin: 0cm }
+
+
+   @media print {
+   body{
+       -webkit-transform: scale(0.7);  /* Saf3.1+, Chrome */
+             -moz-transform: scale(0.7);  /* FF3.5+ */
+              -ms-transform: scale(0.7);  /* IE9 */
+               -o-transform: scale(0.7);  /* Opera 10.5+ */
+                  transform: scale(0.7);
+        margin: -50px -73px 0;  /* big hack to reposition the page top the top and left of the viewer control */
+}
+ 
+
+  
+
+    input {border: none;
+        width:auto;
+   overflow:visible;
+        
+    }
+    select {
+        border: none;
+        width:auto;
+   overflow:visible;
+        
+    }
+
+ p {page-break-inside: avoid;}
+}

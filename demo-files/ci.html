@@ -1,0 +1,549 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"  src="03-textos.js">  </script>
+<title>COMUNICADO INTERIOR</title> 
+<style type="text/css">
+/* Características generales de la página */
+  #main-header {
+     height: 160px;
+} 
+
+  #main-header  {
+      border-style: outset;
+      border-bottom: 6px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      border-top: 1px solid grey;
+      
+      }
+  #oculta{display: none;}
+
+  #main-header a {
+    color: black;
+
+  }
+ 
+.letter-spacing{
+       letter-spacing: 1.5em;
+       margin-right:-1.6em;
+       font-family:"Calibri",bold;
+       font-style: bold;
+       color: black;
+       font-size: 1.5em;
+      
+   }
+   
+#logo-header {
+  float: left;
+  padding: 15px 0 0 20px;
+  text-decoration: none;
+  text-align: justify;
+}
+
+
+#contacto {
+  float: right;
+  padding: 15px 0 0 20px;
+  text-decoration: none;
+  font-family:"Gill Sans",sans-serif;
+  font-size: 0.9em;
+  margin-right: 15px;
+}
+  
+  
+  #logo-header .site-name {
+    display: block;
+    font-size: 0.9em;
+    font-family: "Gill Sans";
+
+
+  }
+  #black{ 
+    background: #333;
+    line-height: 20px;
+    border-bottom: 3px solid  #333;
+  }
+#black:hover {
+    background:  #0b76a6;
+    border: 1px solid #0b76a6;
+
+  }
+
+
+
+  #logo-header .site-desc {
+    display: block;
+
+  }
+.site-desc {
+    font-size: 0.87em;
+    color: white;
+    font-family:"Calibri",bold;
+
+    
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* El contenedor define la zona principal de contenido */
+#contenedor {
+  background: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  width: 768px;
+}
+
+/* El formulario está definido como una lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  border: solid 1px black;
+  margin: 1em 0;
+  padding: 1em;
+  width: auto;
+  overflow: hidden;
+  background:  #afbfcf;
+}
+
+/* El formulario se organiza en dos columnas, el título y los controles */
+ul li label.titulo {
+  float: left;
+  width: 150px;
+  text-align: right;  
+}
+ 
+ul li div.controles {
+  margin-left: 16px;
+}
+
+
+ul li.botones input {
+  font-size: 18px;
+}
+
+/* El título de los elementos de la lista */ 
+ul li label.titulo {
+  font-weight: bold;
+}
+ 
+ul li div span {
+  float: left;
+  padding: 0.3em 0;
+}
+ 
+ul li div span.completo {
+  width: 100%;
+}
+ 
+#nombre{width: 360px;}
+ 
+
+
+/* Como se define display: block, se muestra en la línea siguiente */
+ul li div span label {
+  display: block;
+  font-size: 15px;
+  color: #333;
+}
+
+
+ 
+
+ 
+
+ 
+/* Cambia el color cuando se sitúa el cursor del ratón */
+ul li:hover {
+  background-color: #809ab3;
+}
+ 
+
+
+/* Destaca el control cuando recibe el foco */
+ul li input, ul li select {
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+}
+
+ul li input:focus, ul li select:focus {
+  border: 2px solid #F00;
+}
+
+ul li a {
+  border: solid 1px black;
+  background-color: #60819f;
+  color: white;
+  font-style: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 245px;
+}
+
+ul li a:hover {
+  background-color: white;
+  color:black;
+  }
+
+ #main-header1 {
+  
+  color: black;
+  height: 160px;
+} 
+
+  #main-header1  {
+    //border-style: outset;
+      border-bottom: 6px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      border-top: 1px solid grey;
+       
+
+  }
+  #main-header1 a {
+    color: black;
+  }
+ 
+  #grey  {
+    color: #f4f4f4;
+  }
+
+#logo-header1{
+
+  float: right;
+  padding: 3px;
+
+  
+}
+
+#contacto1 {
+  float: left;
+  text-decoration: none;
+  font-family:"Gill Sans",sans-serif;
+  font-size: 0.8em;
+  padding: 3px;
+}
+  #logo-header1:hover {
+    color: blue;
+  }
+  
+  #logo-header1 .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family:"Gill Sans",sans-serif;
+
+
+  }
+  
+  .site-desc1 {
+    padding: 3px;
+    font-size: 1em;
+    font-family:"Gill Sans";
+  }
+
+  #divBordeGrey{
+    border: 2px black;
+  }
+    p {
+      font-size: 1.3em;
+      text-align: justify;
+    }
+
+    #desapareceDiv{display: none;}
+table{width: 100%;}
+
+textarea{    
+       width: 100%;
+       height: 40%;
+       font-size:0.9em;
+             font-family:"Gill Sans",sans-serif;
+             text-align:justify;}
+
+h1
+  {margin-top:12.0pt;
+  margin-right:0cm;
+  margin-bottom:3.0pt;
+  margin-left:0cm;
+  page-break-after:avoid;
+  font-size:14.0pt;
+  text-align: center;
+  font-family:"Arial",sans-serif;}
+h3
+  {margin-top:12.0pt;
+  margin-right:0cm;
+  margin-bottom:3.0pt;
+  margin-left:0cm;
+  page-break-after:avoid;
+  font-size:12.0pt;
+  font-family:"Times New Roman",serif;}
+input{
+  border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid  #0b76a6;
+  font-size:1.1em;
+  font-family:"Gill Sans",sans-serif;
+  
+}
+
+input:focus, select:focus {
+  background-color: #a0d7ef;
+}
+        input:hover, select:hover {
+  background-color: #a0d7ef ;
+}
+  input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid  #0b76a6;
+       
+        }
+input:focus, select:focus {
+  background-color: #a0d7ef;
+}
+        input:hover, select:hover {
+  background-color: #a0d7ef ;
+}
+
+ p.MsoNormal, li.MsoNormal, div.MsoNormal,td
+  {margin:0cm;
+  margin-bottom:.0001pt;
+  font-family:"Gill Sans",sans-serif;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+
+  @page { size: auto;  margin: 3mm 0mm 0mm 0mm;}
+  @media print {
+
+   #contenedor{margin-top:50px;}
+    input {
+        border: none;
+        width:auto;
+   overflow:visible;
+         }
+         textarea {
+        border: none;}
+ p {page-break-inside: avoid;}
+ strong{font-size:0.9em;}
+ body{
+          -webkit-transform: scale(0.85);  /* Saf3.1+, Chrome */
+             -moz-transform: scale(0.85);  /* FF3.5+ */
+              -ms-transform: scale(0.85);  /* IE9 */
+               -o-transform: scale(0.85);  /* Opera 10.5+ */
+                  transform: scale(0.85);
+        margin: -50px -73px 0px;  /* big hack to reposition the page top the top and left of the viewer control */
+}
+}
+</style>
+</head>
+ 
+<body>
+  
+
+<div id="contenedor">
+<div id="oculta">
+  <header id="main-header">
+      <a id="logo-header" target="_blank" href="https://www.alcobendas.org/es/portal.do?TR=C&IDR=2918">
+     <strong class="letter-spacing">EMARSA</strong>
+     <span id="black" class="site-desc">Empresa Municipal Auxiliar de Recaudación S.A.</span>
+    </a> 
+    <a id="contacto" >
+      <span class="site-name">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-name">&nbsp;28100 ALCOBENDAS</span></br>
+      <span class="site-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel.916510658</span></br>
+      <span class="site-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax.916540206</span>
+    </a> 
+  </header> 
+ </div>   
+ 
+
+<header id="main-header1">
+  
+    <a id="contacto1" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc1">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc1">28100 ALCOBENDAS</span></br>
+      <span class="site-desc1">Tel.916510658</span></br>
+      <span class="site-desc1">Fax.916540206</span>
+    </a> 
+
+        <a id="logo-header1">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header></br></br></br>
+
+
+
+
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=0
+ style='width:100%.1pt;border-collapse:collapse;border:none'>
+ 
+ <tr id="CI" style='height:25.8pt'>
+
+  <td width=663 colspan=2 valign=top style='width:497.1pt;border:solid windowtext 1.0pt;
+  border-bottom:none;padding:0cm 3.5pt 0cm 3.5pt;height:  42pt'>
+  <h1><span lang=ES-TRAD style='font-size:0.9em;font-family:"Gill Sans",sans-serif;text-align:center;
+  color:grey'>COMUNICADO  INTERIOR</span></h1>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=328 valign=top style='width:246.0pt;border:solid windowtext 1.0pt;
+  padding:0.3cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal><b><span style='font-size:0.9em'>Fecha: <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>
+  <p class=MsoNormal><b><span style='font-size:11.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=335 valign=top style='width:251.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0.3cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:13pt'>REF:  <spam id="ref2"></spam></span></b></p>
+  </td>
+ </tr>
+ 
+<tr>
+  <td width=328 valign=top style='width:246.0pt;border:solid windowtext 1.0pt;
+  padding:0.3cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal><b><span style='font-size:0.9em;'>DE: Recaudación
+  Municipal
+  <p class=MsoNormal><b><span style='font-size:11.0pt'>&nbsp;</span></b></p>
+  </td>
+  <td width=335 valign=top style='width:251.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0.3cm 3.5pt 0cm 3.5pt'>
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:13pt'>A: <spam id="des2"></spam></span></b></p>
+  </td>
+ </tr>
+
+ </table> 
+
+</br>
+
+
+
+
+
+   <strong>ASUNTO:</strong>    <strong id="asun2"></strong>
+
+
+<div id="menu"></div>
+
+ 
+
+
+
+
+         
+         <p align=left><b><h4>Atentamente.</h4></b></p>
+
+         <p align=left><b><h4>Recaudación Municipal.</h4></b></p>
+      
+
+ 
+<form id="myform" method="post" action="#">
+<ul>
+<li>
+  
+  
+  <div class="controles">
+    <span class="completo">
+      <input id="ref"  value="" placeholder="REFERENCIA" />
+      <label>Referencia</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="des"  value="" placeholder="DESTINATARIO"/>
+      <label>Destinatario</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="asun"  value="" placeholder="ASUNTO"/>
+      <label>Asunto</label>
+    </span>
+    <textarea type="texto" id="add_p" placeholder="AÑADE TEXTO" required/></textarea> <button id="add_button">Añadir Texto</button><br>
+    <a id="alta" href="#">Pulsa para Validar</a>
+  
+
+   
+  </div>
+</li>
+</form>
+
+  
+
+ 
+
+
+ 
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ABAJO, ESTOS SE IRÁN INCORPORANDO AL DOCUMENTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var ref = $("#ref");
+       var des = $("#des");
+       var asun = $("#asun");
+       var form = $("#myform");
+       var text = $("#text");
+       var div = $("#desapareceDiv");
+       var alta = $("#alta");
+
+       ref.blur(function(){
+       $("#ref2").text($(this).val()).show();
+        
+       });
+       des.blur(function(){
+       $("#des2").text($(this).val()).show();
+        
+       });
+       asun.blur(function(){
+       $("#asun2").text($(this).val()).show();
+       
+       });
+       
+
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+      
+            
+   });
+
+
+
+</script>
+
+    <script>
+        $('#clic').on({'click': function(){
+        $("#clic").attr('src', 'sello.jpg');
+  
+    }
+        });
+    </script>
+
+         <script>
+           var header = $("#main-header1");
+           header.dblclick(function(){
+           $("#oculta").css("display", "block")
+           header.css("display", "none")
+          
+          });
+          </script>
+</html>

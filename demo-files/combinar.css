@@ -1,0 +1,92 @@
+
+
+@page { size: auto;  margin: 0mm; }
+
+body {text-align:justify; 
+      padding:20px ;
+      margin-right:5%;
+      font-family: Arial,sans-serif;
+      font-size:1.5em;
+      margin-left:50px;
+
+}
+
+      
+img{
+      margin: 10px 10px 80px -35px;
+      margin-right: -5%;
+      height: 200px;
+      width: 109%}
+
+
+
+input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 1px solid  #0b76a6;
+    min-width:200px;
+    text-align:center;
+    font-weight: bold;
+    text-transform:uppercase;
+    resize: both;
+    overflow: auto;
+    font-size:0.9em;
+}
+
+input:focus, select:focus {
+  background-color: #a0d7ef;
+}
+        input:hover, select:hover {
+  background-color: #a0d7ef ;
+}
+
+select {text-align:justify; 
+ margin-left: -5px;
+      font-size:1em;
+
+}
+
+#firma{
+  float: right;
+       /*margin: 250px 0px 0px 0px;*/
+       text-align: right;
+            }
+
+            #firmado{
+               float: right;
+               text-align: right;
+               font-size:0.95em;
+            }
+
+h11 { text-indent: 25px; 
+      font-weight: bold;
+      font-style: italic;
+      padding-left:120px;
+}
+ 
+
+script{
+       font-weight: bold;
+            }
+
+
+@media print {
+
+     
+    input {
+
+        border: none;
+        width:auto;
+   overflow:visible;
+        
+    }
+    select {
+        border: none;
+        width:auto;
+   overflow:visible;
+        
+    }
+
+ p {page-break-inside: avoid;}
+}

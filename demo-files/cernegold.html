@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<link rel="stylesheet"href="combinar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<title>CERTIFICADO NEGATIVO</title>
+ 
+</head>
+
+
+<div id="logo">
+<figure><img src="encabezado.jpg" alt=""></figure>
+</div>
+
+<body>
+
+<input type="text" name="valor1"  placeholder="Elige Firma" style="width: 600px;font-weight: normal;text-align:left;" onkeyup="fAgrega();"/><br>
+   <p> <select name="color1">
+     <option value="ISIDRO VALENZUELA VILLARRUBIA">Tesorero del Ayuntamiento de Alcobendas</option>
+     <option value="NATALIA LÓPEZ SACRISTÁN">Recaudadora en funciones</option>
+	</select></p>
+
+<p>Hago constar:</p><br>
+
+<p>Que según los antecedentes contables obrantes en la aplicación de ingresos de esta Recaudación Municipal, <input type="text" placeholder="NOMBRE TITULAR" onclick="resizeInput()"/>con NIF/CIF - <input type="text" placeholder="NIF/CIF" style="width: 50px;text-align:center;" onclick="resizeInput()" />, está al corriente en el pago de las liquidaciones/recibos emitidos a su nombre en concepto de impuestos, tasas o precios públicos municipales, gestionados por esta unidad recaudatoria.</p> 
+
+<p>La presente certificación no se hace extensiva a liquidaciones que se encuentren en periodo voluntario de pago ni a otras obligaciones exigibles pendientes de liquidar, por lo que no producirá los efectos de exención de responsabilidades a los que se refiere el articulo 175.2 de la Ley General Tributaria, para los supuestos de sucesión en la responsabilidad de pago de las deudas tributarias por adquisición de explotaciones o actividades económicas y herencia.</p>
+
+<h11 style="font-size:0.8em;">Y para que conste a los efectos oportunos expido la presente certificación, en Alcobendas a <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>.</h11><br><br>
+
+
+	<input id="firmado" type="text" name="valor2" size="50" style="font-size:0.8em;">
+
+
+   
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("select[name=color1]").change(function(){
+            
+            $('input[name=valor1]').val($(this).val());
+            $('input[name=valor2]').val("FDO."+$(this).val());
+  	
+	});
+});
+</script>
+
+<script type="text/javascript">
+     function resizeInput() {
+    var valueLength = $(this).prop('value').length;
+     // Para que no arroje error si el input se vacía
+    if (valueLength > 0) {
+        $(this).prop('size', valueLength);
+      }
+    }
+    $('input[type="text"]').on('keyup', resizeInput).each(resizeInput);
+    </script>
+</body>
+</html>

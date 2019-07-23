@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<title>Ejemplo de formulario maquetado</title> 
+<style type="text/css">
+/* Características generales de la página */
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  background: #AAA;
+}
+
+/* El contenedor define la zona principal de contenido */
+#contenedor {
+  background: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  width: 768px;
+}
+
+/* El formulario está definido como una lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  border-top: 1px solid #CCC;
+  margin: 1em 0;
+  padding: 1em;
+  width: auto;
+  overflow: hidden;
+}
+
+/* El formulario se organiza en dos columnas, el título y los controles */
+ul li label.titulo {
+  float: left;
+  width: 150px;
+  text-align: right;  
+}
+ 
+ul li div.controles {
+  margin-left: 160px;
+}
+
+/* El último elemento del formulario es el botón "Registrarse" */
+ul li.botones {
+  border-top: 2px solid #CCC;
+  clear: both;
+  float: none;
+  padding: 1em 0;
+  text-align: right;
+  width: 100%;
+}
+ 
+ul li.botones input {
+  font-size: 18px;
+}
+
+/* El título de los elementos de la lista */ 
+ul li label.titulo {
+  font-weight: bold;
+}
+ 
+ul li div span {
+  float: left;
+  padding: 0.3em 0;
+}
+ 
+ul li div span.completo {
+  width: 100%;
+}
+ 
+ul li div span.mitad {
+  width: 50%;
+}
+ 
+ul li div span.tercio {
+  width: 33%;
+}
+ 
+ul li div span.dostercios {
+  width: 66%;
+}
+
+/* Como se define display: block, se muestra en la línea siguiente */
+ul li div span label {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Configuración de los controles del formulario */
+ul li input {
+  padding: 0.2em;
+}
+ 
+input#nombre, input#apellido2, input#asunto, input#email {
+  width: 360px;
+}
+ 
+input#codigopostal {
+  width: 80px;
+}
+ 
+select#consulta {
+  width: 200px;
+}
+ 
+select#pais {
+  width: 150px;
+}
+ 
+input#telefonofijo, input#telefonomovil {
+  width: 135px;
+}
+ 
+/* Cambia el color cuando se sitúa el cursor del ratón */
+ul li:hover {
+  background-color: #0b76a6;
+}
+
+#alta:hover {
+  background-color: #0b76a6;
+  color: white;
+}
+
+
+ul li.botones:hover {
+  background-color: transparent;
+}
+
+/* Destaca el control cuando recibe el foco */
+ul li input, ul li select {
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+}
+
+ul li.botones input {
+  border: 2px solid #CCC;
+}
+
+ul li input:focus, ul li select:focus {
+  border: 2px solid #F00;
+}
+</style>
+</head>
+ 
+<body>
+<div id="contenedor">
+ 
+<h1>Formulario de registro de Llamadas</h1>
+ 
+<form method="post" action="#">
+<ul>
+<li>
+  <label class="titulo" for="nombre">NOMBRE y NIF/CIF</label>
+  
+  <div class="controles">
+    <span class="completo">
+      <input id="nombre" name="nombre" value="" />
+      <label for="nombre">Nombre</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="NIF" name="NIF"  value="" />
+      <label for="nif">NIF/CIF</label>
+    </span>
+ 
+ 
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="asunto">Asunto</label>
+ 
+  <div class="controles">
+   
+    <span class="tercio">
+      <select id="consulta" name="consulta">
+        <option name="asunto" value="asunto">Elige Asunto</option>
+        <option name="asunto" value="EmbSS">EmbSS</option>
+        <option name="asunto" value="FormadePago">Forma de Pago</option>
+        <option name="asunto" value="Domiciliacion">Domiciliación</option>
+        <option name="asunto" value="EmbCC">EmbCC</option>
+        <option name="asunto" value="Multas">Multas</option>
+        <option name="asunto" value="Embb">Embb</option>
+      </select>
+      <label for="consulta"></label>
+    </span>
+ 
+    <!--<span class="dostercios">
+      <select id="pais" name="pais">
+        <option value=""></option>
+        <option value="pais1">País 1</option>
+        <option value="pais2">País 2</option>
+        <option value="pais3">País 3</option>
+      </select>
+      <label for="pais">País</label>
+    </span>-->
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="email">Email</label>
+ 
+  <div class="controles">
+    <span class="completo">
+      <input id="email" name="email" value="" />
+    </span>
+  </div>
+</li>
+ 
+<li>
+  <label class="titulo" for="telefonofijo">Teléfono</label>
+ 
+  <div class="controles">
+    <span class="mitad">
+      <input id="telefonofijo" name="telefonofijo" value="" />
+      <label for="telefonofijo">Fijo</label>
+    </span>
+ 
+    <span class="mitad">
+      <input id="telefonomovil" name="telefonomovil" value="" />
+      <label for="telefonomovil">Móvil</label>
+    </span>
+  </div>
+</li>
+ 
+<li class="botones">
+  <input id="alta" type="submit" onclick="WriteToFile(passForm)" value="Registrar" />
+</li>
+ 
+</ul>
+</form>
+ 
+</div>
+<script type ="text/javascript">
+ function WriteToFile(passForm) {
+
+    set fso = CreateObject("Scripting.FileSystemObject");  
+    set s = fso.CreateTextFile("C:\Users\vmartinez\Documents\MANUALES\WEB\PROYECTO\test.txt", True);
+    s.writeline(document.passForm.input1.value);
+    s.writeline(document.passForm.input2.value);
+    s.writeline(document.passForm.input3.value);
+    s.Close();
+ }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"  src="03-textos.js">  </script>
+<link href="jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<title>NOTIFICACIÓN ELECTRÓNICA</title> 
+
+</head>
+ 
+<body>
+<div id="contenedor">
+<a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+<form id ="myform">
+<ul>
+<li>
+  <label class="titulo">DATOS DESTINATARIO</label><br>
+  
+  <div class="controles">
+
+     <span class="completo">
+      <input id="exp" value="" />
+      <label>EXPEDIENTE</label>
+    </span>
+
+
+    <span class="completo">
+      <input id="nombre" value="" />
+      <label>DESTINATARIO</label>
+    </span>
+
+    <span class="completo">
+      <input id="dni" value="" />
+      <label>DNI / CIF</label>
+    </span>
+
+    <span class="completo">
+      <input id="ref" value="" />
+      <label>REFERENCIA</label>
+    </span>
+
+    <textarea type="texto" id="add_p" placeholder="AÑADE PÁRRAFO" required/></textarea> 
+    <button id="add_button">Añadir Texto</button><br>
+    <a id="alta" href="#">Pulsa para Validar</a>
+    
+  </div>
+
+</li>
+</ul>
+</form>
+ 
+
+
+<header id="main-header" style="margin-top:50px;">
+  
+    <a id="contacto" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc">28100 ALCOBENDAS</span></br>
+      <span class="site-desc">Tel.916510658</span></br>
+      <span class="site-desc">Fax.916540206</span>
+    </a> 
+
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header></br>
+     <div id="referencia">
+          <p id="expB"></p>
+          <p id="nombreB"></p>
+          <p id="dniB"></p>
+          <p id="refB"></p>
+     </div>
+       
+      
+      <br><br><br>
+
+      <div id="menu"></div>
+
+ </div>
+   
+
+  
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ARRIBA, ESTOS SE IRÁN INCORPORANDO AL TEXTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var exp = $("#exp");
+       var nombre = $("#nombre");
+       var dni = $("#dni");
+       var ref = $("#ref");
+       var text = $("#text");
+       var form = $("#myform");      
+       var alta = $("#alta");
+        
+
+
+       exp.blur(function(){
+       $("#expB").text("Expediente: "+$(this).val()).show();
+       });
+
+
+       nombre.blur(function(){
+       $("#nombreB").text("Destinatario: "+$(this).val()).show();
+       });
+
+       dni.blur(function(){
+       $("#dniB").text("CIF/DNI: "+$(this).val()).show();
+       });
+
+       ref.blur(function(){
+       $("#refB").text("Referencia: "+$(this).val()).show();
+       });
+
+       
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+        
+   });
+
+
+</script>
+
+
+
+</body>
+</html>

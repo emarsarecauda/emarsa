@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<link rel="stylesheet"href="combinar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<title>CERTIFICADO NEGATIVO</title>
+ 
+</head>
+
+
+<div id="logo">
+<figure><img src="encabezado.jpg" alt=""></figure>
+</div>
+
+<body>
+
+<input type="text" name="valor1"  placeholder="Elige Firma" style="width: 600px;font-weight: normal;text-align:left;" onkeyup="fAgrega();"/><br>
+   <p> <select name="color1">
+     <option value="ISIDRO VALENZUELA VILLARRUBIA">Tesorero del Ayuntamiento de Alcobendas</option>
+     <option value="NATALIA LÓPEZ SACRISTÁN">Recaudadora Accidental</option>
+	</select></p>
+
+<p>Hago constar:</p><br>
+
+<p>Que según los antecedentes contables obrantes en la aplicación de ingresos de esta Recaudación Municipal, <input type="text" onclick="resizeInput()" />con D.N.I.- <input type="text" onclick="resizeInput()" />, está al corriente en el pago de las liquidaciones/recibos emitidos a su nombre en concepto de impuestos, tasas o precios públicos municipales, gestionados por esta unidad recaudatoria.</p> 
+
+<p>La presente certificación no se hace extensiva a liquidaciones que se encuentren en periodo voluntario de pago ni a otras obligaciones exigibles pendientes de liquidar, por lo que no producirá los efectos de exención de responsabilidades a los que se refiere el articulo 175.2 de la Ley General Tributaria, para los supuestos de sucesión en la responsabilidad de pago de las deudas tributarias por adquisición de explotaciones o actividades económicas y herencia.</p>
+
+<p>Y para que conste a los efectos oportunos expido la presente certificación, en Alcobendas a <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>.<br><br><br>
+
+
+	<input id="firmado" type="text" name="valor2"  style="font-size:0.9em;">
+
+
+   
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("select[name=color1]").change(function(){
+            
+            $('input[name=valor1]').val($(this).val());
+            $('input[name=valor2]').val("FDO."+$(this).val());
+  	
+	});
+});
+</script>
+</body>
+</html>

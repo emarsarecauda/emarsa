@@ -1,0 +1,209 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<title>NOTIFICACIÓN DE PROVIDENCIA DE APREMIO</title> 
+
+</head>
+ 
+<body>
+<div id="contenedor">
+<a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+<form id ="myform">
+<ul>
+<li>
+  <label class="titulo">NOTIFICACIÓN</label><br>
+  
+  <div class="controles">
+
+    <span class="completo">
+      <input id="ref" value="" />
+      <label>REFERENCIA</label>
+    </span>
+
+    <span class="completo">
+      <input id="exp" value="" />
+      <label>EXPEDIENTE</label>
+    </span>
+
+    <span class="completo">
+      <input id="nombre" value="" />
+      <label>DEUDOR</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="dni" value="" />
+      <label>DNI / CIF</label>
+    </span>
+
+    <span class="completo">
+      <input id="date" value="" />
+      <label>FECHA</label>
+    </span>
+
+    <span class="completo">
+      <input id="prin" value="" />
+      <label>PRINCIPAL</label>
+    </span>
+
+    <span class="completo">
+      <input id="total" value="" />
+      <label>TOTAL</label>
+    </span>
+
+
+ 
+
+    
+    <a id="alta" href="#">Pulsa para Validar</a>
+    
+  </div>
+
+</li>
+</ul>
+</form>
+ 
+
+
+<header id="main-header">
+  
+    <a id="contacto" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc">28100 ALCOBENDAS</span></br>
+      <span class="site-desc">Tel.916510658</span></br>
+      <span class="site-desc">Fax.916540206</span>
+    </a> 
+
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header></br>
+   <div id="referencia">
+   <!--<strong class="gray">Referencia:</strong> <strong class="margen-der" id="ref2"></strong><br>
+   <strong class="gray">Expediente:</strong> <strong class="margen-der" id="exp2"></strong><br>
+   <strong class="gray">Deudor:</strong> <strong class="margen-der" id="nombre2"></strong><br>
+   <strong class="gray">DNI/NIF:</strong> <strong class="margen-der" id="dni2"></strong><br>-->
+          <p id="ref2"></p>
+          <p id="exp2"></p>
+          <p id="nombre2"></p>
+          <p id="dni2"></p>
+   </div>
+  <h2 id="titulo">NOTIFICACIÓN DE PROVIDENCIA DE APREMIO</h2>
+  <h3 class="cuadro">DETALLE DE LOS DEBITOS APREMIADOS</h3>
+      <table border="1">
+      <tr>
+      <th style="width: 500px;">Concepto</th>
+      <th style="width: 150px;">Fecha</th>
+      <th style="width: 150px;">Principal</th>
+    </tr>
+    <tr>
+      <td>Incumplimiento según artículo 42.2, letra b) de la Ley 58/2003 General Tributaria embargo de salario según declaración de 
+        responsabilidad de fecha............</td>
+      <td><b id="date2"></b></td>
+      <td><b id="prin2"></b></td>
+
+    </tr>
+    </table>
+    <h3 class="cuadro">RESUMEN DE LOS DÉBITOS</h3>
+    <p class="cuadro2">SI EL PAGO SE EFECTUA <b>DENTRO DEL PLAZO</b> SEÑALADO MAS ABAJO
+     <b>TOTAL A INGRESAR</b> (PRINCIPAL+10% DE RECARGO).......<strong id="total2"></strong> EUROS
+      </p> 
+      <p class="cuadro2">SI EL PAGO SE EFECTUA <b>FUERA DEL PLAZO</b> SEÑALADO MAS ABAJO, EL IMPORTE A INGRESAR SERA LA SUMA DE <b>PRINCIPAL + 20% RECARGO DE APREMIO ORDINARIO + INTERESES Y COSTAS HASTA LA FECHA EN QUE TENGA LUGAR EL PAGO</b>. A su solicitud, esta oficina le facilitará en su momento el importe total actualizado de la deuda para su ingreso.
+      </p>
+
+
+
+
+<p>En el expediente administrativo de apremio de referencia, en el que se le declaró a Ud. <u>responsable solidario</u> de la deuda girada en su día a nombre del titular de dicho expediente, y habiendo finalizado el plazo para el pago en período voluntario de los débitos a los que alcanza dicha responsabilidad el día<input placeholder="FECHA" style="text-align: center;font-weight: bold;"/>, se ha dictado por el Sr. Tesorero Municipal con fecha <input placeholder="FECHA" style="text-align: center;font-weight: bold;;"/> la siguiente providencia a su nombre, la cual tiene carácter de título ejecutivo de conformidad con lo dispuesto en el artículo 167 de la LGT (Ley 58/2003, de 17 de diciembre, General Tributaria):</p>
+
+<p id="cur">"PROVIDENCIA.- Al haber finalizado, en la fecha que se indica, el plazo de ingreso en período voluntario, sin que los obligados al pago citados hayan satisfecho la deuda por los conceptos, importes y períodos que se detallan, se inició al día siguiente el período ejecutivo y el devengo de intereses de demora. Por ello, haciendo uso de la facultad que al efecto me confiere el artículo 5.2 (d) del Real Decreto 128/2018, de 16 de marzo, y el artículo 70.3 del Reglamento General de Recaudación, y de conformidad con lo dispuesto en el artículo 167 de la Ley General Tributaria (LGT), dicto la presente PROVIDENCIA DE APREMIO, como título que lleva aparejada la ejecución, liquidando los recargos  a los que se refiere el artículo 28 de la LGT (recargo ejecutivo del 5% si la totalidad de la deuda se ingresa antes de la notificación de la providencia de apremio, recargo de apremio reducido del 10% cuando se ingrese la totalidad de la deuda y el propio recargo antes de la finalización del plazo previsto en el artículo 62.5 de la LGT para las deudas apremiadas, y recargo de apremio ordinario de 20% cuando no concurran las anteriores circunstancias), con requerimiento expreso para que efectúen el pago de la deuda, incluido el recargo de apremio reducido del 10%, en el plazo señalado en el artículo 62.5 de la LGT. De no efectuar el ingreso del importe total de la deuda pendiente en dicho plazo, se procederá al embargo de sus bienes y derechos o a la ejecución de las garantías existentes para su cobro con inclusión del recargo de apremio ordinario del 20% y de las costas e intereses de demora que se devenguen hasta la fecha de cancelación de la deuda."</p> 
+
+<p>En su virtud, VENGO EN REQUERIRLE para que proceda al pago de la deuda en los siguientes <b>PLAZOS</b> establecidos en el artículo 62.5 de la LGT: Las deudas apremiadas notificadas entre los días 1 y 15 de cada mes, hasta el día 20 de dicho mes o inmediato hábil posterior, y las notificadas entre los días 16 y último de cada mes, hasta el día 5 del mes siguiente o inmediato hábil posterior (art. 62.5 LGT). Caso de que en dichos plazos no se efectúe al pago de la deuda, se exigirá el RECARGO DE APREMIO ORDINARIO (20%), las costas y los intereses de demora devengados desde la fecha de inicio del período ejecutivo, procediéndose al embargo de los bienes del deudor o a la ejecución de las garantías, si éstas existieren.</p>
+
+<p>FORMA DE PAGO </p>
+
+<p>El pago deberá ser efectuado mediante ingreso en la cuenta en BANCO SANTANDER de la que es titular este Ayuntamiento de Alcobendas, <b>IBAN ES73-0049-5176-1624-1684-0867</b>, indicando sus datos personales, así como el número y titular del expediente, o, si lo prefiere, en las oficinas de la Recaudación Municipal, donde se emitirá carta de pago para que el ingreso pueda efectuarse en las entidades de crédito que le prestan servicio de caja. El horario de la Recaudación Municipal es de 09.00 a 18.00 horas de lunes a viernes, excepto del 15 de junio al 15 de septiembre que el horario es de 09.00 a 15.00 horas de lunes a viernes).</p>
+
+<p>APLAZAMIENTO Y FRACCIONAMIENTO</p>
+
+<p>En los términos que se establecen en el artículo 70 y siguientes de la Ordenanza General de Gestión, Recaudación e Inspección de los Ingresos Propios de Derecho Público, el deudor podrá solicitar de este Ayuntamiento la concesión de aplazamiento o fraccionamiento de la deuda.
+</p>
+
+<p>INTERESES Y COSTAS</p>
+
+<p>Los intereses de demora solo serán exigibles cuando sea aplicable el recargo de apremio ordinario del 20% (artículos  28.5 y 161.4 LGT).
+Las costas que se generen en el procedimiento serán exigibles cuando sea de aplicación el recargo de apremio reducido del 10% o el recargo de apremio ordinario del 20% (artículo 161.4 LGT).
+</p>
+
+<p>RECURSOS</p>
+
+<p>Contra la providencia de apremio sólo podrá interponerse el <b>RECURSO DE REPOSICIÓN</b> regulado en el artículo 14 del texto refundido de la Ley Reguladora de las Haciendas Locales, aprobado mediante Real Decreto Legislativo 2/2004, de 5 de marzo, y, conforme a lo dispuesto en el artículo 167.3 de la LGT, sólo serán admisibles los siguientes motivos de oposición: a) Extinción total de la deuda o prescripción del derecho a exigir el pago; b) Solicitud de aplazamiento, fraccionamiento o compensación en período voluntario y otras causas de suspensión del procedimiento de recaudación; c) Falta de notificación de la liquidación; d) Anulación de la liquidación; e) Error u omisión en el contenido de la providencia de apremio que impida la identificación del deudor o de la deuda apremiada.
+Contra la resolución expresa o tácita de dicho recurso, podrá interponerse recurso contencioso-administrativo, dentro de los plazos señalados en el artículo 58 de la Ley Reguladora de la Jurisdicción Contencioso-Administrativa.
+El procedimiento de apremio solo se suspenderá en los casos y condiciones previstos en la normativa vigente.</p>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ARRIBA, ESTOS SE IRÁN INCORPORANDO AL TEXTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var ref = $("#ref");
+       var exp = $("#exp");
+       var nombre = $("#nombre");
+       var dni = $("#dni");
+       var date = $("#date");
+       var prin = $("#prin");
+       var total = $("#total");
+       
+       
+       var form = $("#myform");
+       var alta = $("#alta");
+        
+       ref.blur(function(){
+       $("#ref2").text("Ref.: "+$(this).val()).show();
+       });
+
+       exp.blur(function(){
+       $("#exp2").text("Expediente: "+$(this).val()).show();
+       });
+
+
+       nombre.blur(function(){
+       $("#nombre2").text("Destinatario: "+$(this).val()).show();
+       });
+
+       dni.blur(function(){
+       $("#dni2").text("DNI/CIF: "+$(this).val()).show();
+       });
+
+       date.blur(function(){
+       $("#date2").text($(this).val()).show();
+       });
+
+       prin.blur(function(){
+       $("#prin2").text($(this).val()).show();
+       });
+
+       total.blur(function(){
+       $("#total2").text($(this).val()).show();
+       });
+
+       
+
+
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+        
+   });
+
+
+</script>
+
+
+
+</body>
+</html>

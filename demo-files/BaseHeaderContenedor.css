@@ -1,0 +1,332 @@
+/* Características generales de la página */
+body {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  
+}
+h1{
+  color:white;
+  background: #ccc;
+  text-align: center;
+  }
+
+  /*notif*/
+  .cuadro{
+  border: 1px solid;
+  font-weight: 2em;
+  text-align: center;
+  padding: 4px;
+  width: 40%;
+  margin-left: 220px;
+  }
+    .cuadro2{
+  font-size: 12px;  
+  border: 1px solid;
+  text-align: justify;
+  padding: 2px;
+  width: 100%;
+  }
+
+  #referencia{
+  padding: 8px;
+  border: 1px solid;
+  font-size: 12px;  
+    }
+  #referencia p{
+  text-align: center;
+  margin: 0px;
+  }
+
+  #referencia2{
+  padding: 8px;
+  border: 1px solid;
+  font-size: 12px;  
+  }
+  
+  #referencia2 p{
+  text-align: justify;
+  margin: 0px;
+  }
+  
+  #referencia2 #nombre2{margin-left: 10px;}
+  #referencia2 #exp2{margin-left: 89px;}
+  #referencia2 #dni2{margin-left: 108px;}
+  #referencia2 #importe2{margin-left: 22px;}
+  .placeholder{
+    color:red;
+  }
+  
+ 
+
+  td{
+    text-align: center;
+   }
+#titulo{
+  padding:3px;
+  background: #ccc;
+  text-align: center;
+  }
+
+/* El contenedor define la zona principal de contenido */
+#contenedor {
+  background: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  width: 768px;
+}
+
+/* El formulario está definido como una lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  
+  margin: 1em 0;
+  width: auto;
+  overflow: hidden;
+  background:  #afbfcf;
+  border: solid 1px black;
+  padding: 8px;
+}
+
+/* El formulario se organiza en dos columnas, el título y los controles */
+ul li label.titulo {
+  float: left;
+  width: 150px;
+  text-align: right;  
+}
+ 
+ul li div.controles {
+  margin-left: 160px;
+}
+
+
+/* El título de los elementos de la lista */ 
+ul li label.titulo {
+  font-weight: bold;
+}
+ 
+ul li div span {
+  float: left;
+  padding: 0.3em 0;
+}
+ 
+ul li div span.completo {
+  width: 100%;
+}
+ 
+#nombre,#dir,#concep{width: 360px; }
+
+/* Como se define display: block, se muestra en la línea siguiente */
+ul li div span label {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Configuración de los controles del formulario */
+ul li input {
+  padding: 0.2em;
+}
+ 
+/* Cambia el color cuando se sitúa el cursor del ratón */
+ul li:hover {
+  background-color: #809ab3;
+}
+
+/* Destaca el control cuando recibe el foco */
+ul li input, ul li select {
+  border: 2px solid transparent;
+  border-bottom: 2px solid black;
+}
+
+ul li input:focus, ul li select:focus {
+  border: 2px solid red;
+}
+
+ul li a {
+  border: solid 1px black;
+  background-color: #60819f;
+  color: white;
+  font-style: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 245px;
+  padding: 2px;
+
+}
+
+ul li a:hover {
+  background-color: white;
+  color:black;
+  }
+
+
+
+#main-header {
+  
+  color: black;
+  height: 160px;
+} 
+
+  #main-header  {
+      margin-top: 25px;
+      border-style: outset;
+      border-bottom: 6px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      border-top: 1px solid grey;
+       
+
+  }
+  #main-header a {
+    color: black;
+  }
+ 
+  #grey  {
+    color: #f4f4f4;
+  }
+
+#logo-header{
+
+  float: right;
+  padding: 3px;
+
+  
+}
+
+#contacto {
+  float: left;
+  text-decoration: none;
+  font-family:"Gill Sans",sans-serif;
+  font-size: 0.8em;
+  padding: 3px;
+}
+  #logo-header:hover {
+    color: blue;
+  }
+  
+  #logo-header .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family:"Gill Sans",sans-serif;
+
+  }
+  
+  .site-desc {
+    padding: 3px;
+    font-size: 1.2em;
+    font-family:"Gill Sans";
+  }
+
+  #divBordeGrey{
+    border: 2px black;
+  }
+    p {
+      font-size: 1.3em;
+      text-align: justify;
+    }
+
+ #desapareceDiv{display: none;}
+
+ input {
+    width: 100px;
+    border: 0;
+    outline: 0;
+    resize: both;
+    overflow: auto;
+    font-size:0.9em;
+    font-weight: bold;
+       
+}
+
+select{
+  font-size:1em;
+}
+
+fieldset{
+display:inline-block;
+
+}
+
+#cur{
+  font-style: oblique;
+}
+
+textarea{    
+       width: 98%;
+       height: 40%;
+       margin-bottom: 3px;
+ }
+
+strong{
+  font-size:1.3em;
+}
+
+#art42{
+  border: solid 1px;
+  font-size:0.8em;
+  text-align: justify;
+}
+
+.gray{
+color: gray;
+}
+
+.print-pdf {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 0.925rem;
+  letter-spacing: 0.3em;
+  color: black;
+  border-radius: 0;
+  padding: 18px ;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(
+    270deg,
+    rgba(240, 240, 255, 0.8),
+    rgba(255, 255, 247, 0.8),
+    rgba(68, 65, 65, 0.1),
+    rgba(34, 34, 34, 0.1)
+  );
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.print-pdf:hover {
+  border: 1px solid rgba(25, 25, 24, 0.36);
+  color: blue;
+  background-position: 99% 50%;
+}
+
+
+  @page { size: auto;  margin: 3mm 0mm 0mm 0mm;}
+  @media print {
+
+    .print-pdf{display:none;}
+    input,select {
+        border: none;
+        width:auto;
+        overflow:visible;
+         }
+         textarea {
+        border: none;}
+ p {page-break-inside: avoid;}
+ strong{font-size:1.2em;}
+ body{
+          -webkit-transform: scale(0.85);  /* Saf3.1+, Chrome */
+             -moz-transform: scale(0.85);  /* FF3.5+ */
+              -ms-transform: scale(0.85);  /* IE9 */
+               -o-transform: scale(0.85);  /* Opera 10.5+ */
+                  transform: scale(0.85);
+        margin: -50px -73px 0px;  /* big hack to reposition the page top the top and left of the viewer control */
+}
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset=="iso-8859-1" />
+<title>Solicitud de Aplazamiento</title> 
+<style type="text/css">
+<meta charset="iso-8859-1" />
+
+
+
+
+body {text-align:justify; 
+       padding:20px ;
+      font-family: Arial,sans-serif;
+      }
+
+#contenedor {
+  background: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  width: 768px;
+}
+
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+fieldset {
+  margin: 1em auto;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:grey;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;}
+
+input:focus, select:focus {
+  background-color: #a0d7ef;
+}
+        input:hover, select:hover {
+  background-color: #a0d7ef ;
+}
+
+  
+#NIF fieldset{
+  display: inline-block;
+  }
+
+
+#DOMICILIO fieldset{
+  display: inline-block;
+
+  }
+
+
+
+@media (max-width: 600px) {
+ 
+  body {
+    font-family: Arial,sans-serif;
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  border-bottom: 1px solid #000;
+  }
+
+  h3,h9,legend,input,p {
+    font-size: 0.7em;
+  }
+
+
+}
+
+
+input.largerCheckbox
+{
+width: 15px;
+height: 15px;
+}  
+
+fieldset
+{
+    border: 2px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+    border-radius: 8px;
+    margin: 0 5px;
+    height: 100%;
+}
+
+ @page { size: auto;  margin: 3mm 0mm 0mm 0mm;}
+  @media print {
+
+   
+    input {
+        border: none;
+        width:auto;
+   overflow:visible;
+         }
+         textarea {
+        border: none;}
+ p {page-break-inside: avoid;}
+ strong{font-size:0.9em;}
+ body{
+          -webkit-transform: scale(0.85);  /* Saf3.1+, Chrome */
+             -moz-transform: scale(0.85);  /* FF3.5+ */
+              -ms-transform: scale(0.85);  /* IE9 */
+               -o-transform: scale(0.85);  /* Opera 10.5+ */
+                  transform: scale(0.85);
+        margin: -50px -73px 0px;  /* big hack to reposition the page top the top and left of the viewer control */
+}
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+<div id="contenedor">
+<header>
+<h1>SOLICITUD DE APLAZAMIENTO-FRACCIONAMIENTO DE DEUDAS
+</h1>
+<h2>(HASTA 6.000 EUROS)</h2>
+</header>
+
+
+<fieldset id="name">
+<legend>Apellidos y nombre o razón social</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+<div id="NIF">
+<fieldset >
+<legend>NIF</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+
+<fieldset >
+<legend>TELÉFONO</legend>
+<input type="tel" style="width: 100%;"></p>
+</fieldset>
+</div>
+
+
+<fieldset >
+<legend>DOMICILIO</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+<div id="NIF">
+<fieldset >
+<legend>MUNICIPIO</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+
+<fieldset >
+<legend>CÓDIGO POSTAL</legend>
+<input type="tel" style="width: 100%;"></p>
+</fieldset>
+</div>
+<h3>
+Deuda para la que solicita el aplazamiento/fraccionamiento (marcar lo que corresponda)
+</h3>
+<p>
+<input type="checkbox"  checked="checked" class="largerCheckbox"/> TODA LA DEUDA ACTUAL EN EJECUTIVA
+</p>
+
+<p>
+<input type="checkbox" class="largerCheckbox" />  SOLO LAS LIQUIDACIONES INDICADAS EN RELACIÓN ADJUNTA
+</p>
+
+
+<div id="NIF">
+<fieldset >
+<legend>Nº EXPEDIENTE</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+<fieldset >
+<legend >PLAZO QUE SOLICITA (MESES)</legend>
+<input type="tel" style="width: 100%;"></p>
+</fieldset>
+
+<fieldset style="width: 70%;" >
+<legend >CUENTA DOMICILIACIÓN</legend>
+<input type="tel" style="width: 100%;"></p>
+</fieldset>
+</div>
+
+<fieldset style="width: 25%;">
+<legend>FIRMADO</legend>
+<input  type="text" style="width: 100%;"></p>
+</fieldset>
+
+
+   <h3> Alcobendas,
+
+
+<script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write("___" + " de " + "____________" + " de " + f.getFullYear());
+</script></h3>
+
+
+<h9 style="font-style: italic;">Los datos personales contenidos en este documento serán tratados
+informáticamente en los términos del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas, pudiendo los interesados ejercer los derechos de acceso, rectificación, supresión y cancelación, ante la Directora del Área Económico-Financiera, como responsable del tratamiento "Rentas y Exacciones"</h9>
+<h2>
+NOTA: No se dará curso a las solicitudes incompletas o que resulten ilegibles.
+</h2> 
+
+<div>
+</body>
+</html>

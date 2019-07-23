@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet"href="print2.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Seguimiento de Procesos de Recaudación</title>
+<style>
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1201px) {
+ 
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  
+  }
+
+
+
+@media (max-width: 600px) {
+   
+
+  }
+
+
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #0b76a6;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: black;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
+
+
+
+</head>
+<body>
+<h1>Seguimiento de Procesos de Recaudación</h1>
+
+<fieldset>
+<legend><h2>Inclusión en Expediente</h2></legend>
+(Si el apremio se recibe entre  01-15 vencen el 20 INCLEX EL 25,
+si el apremio se recibe entre  16-30 vencen el 5  INCLEX EL 10)
+<p>Se ha de filtrar por los siguientes conceptos:</p>
+
+<label class="container">Situación = Ejecutiva
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Estado = Pendiente
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Indic.(desmarcar) = Incl. en expediente, Fraccionado, Paralizado
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Fechas = Vto.Not.Apremio<=
+  <input type="checkbox">
+  <span class="checkmark"></span>
+  <strong><script>
+var f = new Date();
+document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+</script></strong>
+</label>
+
+<p>
+Ejecutar operación:
+</p>
+<label class="container">INCLEX = Automática (Coincidencias por defeto)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<input type="radio" name="grad-yes" value="Yes" />Crear nuevo Expediente
+<input type="radio" name="grad-no" value="Yes" />Crear nuevo expediente
+</fieldset>
+
+<fieldset>
+<legend><h2>Notificación Electrónica individual</h2></legend>
+(Mediante dos formularios Generar_FIC_DOC_Varios_ALTA y Generar_FIC_DOC_Varios_Traspaso)
+\\ayto14info401\MDB\JRC\Envios\NTF_ELECTR_Indiv.mdb
+<p></p>
+<label class="container">EJECUTIVA-EXPEDIENTES (Selecionar uno, botón imprimir Elegir "Generar_FIC_DOC_Varios_ALTA"
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">1.- Nº DE EXPEDIENTE (Tabular)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">2.- NOMBRE (lo coje automático, si el doc lleva otro nombre por derivación cambiar manual)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">3.- USUARIO ENVIO: INICIALES
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">4.- OBTENER REFERENCIA (pegar esta en el doc) 
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">5.- CONCEPTO: REFERENCIA+CONCEPTO+FECHA
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">6.- CONVERTIR A PDF
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">7.- VINCULAR PDF
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">8.- VALIDAR (En el pie de formulario se ven todos los registros ptes de traspaso)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<p>FIRMAR al validar el pdf va \\cfiayto21\Recaudacion_ficheros\VARIOS\tribugest\Notificaciones\2018\Varios\Para_FIRMAR</p>
+<p>Eliminar "firmado" de \\cfiayto21\Recaudacion_ficheros\VARIOS\tribugest\Notificaciones\2018\Varios\</p>
+<p>Ver en que servidor citrix se ha logado para ejecutar "Traspaso"</p>
+<p>FORMULARIO Generar_FIC_DOC_Varios_Traspaso, "LLENAR TABLA" (Con todos los registros ptes de traspaso. Por defecto informática envia todos por la noche, para forzar el envio existe una aplicación.)</p>
+</fieldset>
+
+<fieldset>
+<legend><h2>Notificación Electrónica de Alzamientos SS</h2></legend>
+\\ayto14info401\MDB\JRC\Envios\Envios.mdb
+<p></p>
+<label class="container">Abrir el formulario “Generar_FIC_AlzamSS”
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Rellenar la tabla de la izquierda del formulario con los números de expediente que nos habrán comunicado
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Firmar PDF’s generados en paso anterior. (guardados en C:\Temp)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">"Renombrar y Mover PDFs Firmados"
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<p>\\cfiayto21\Recaudacion_ficheros\VARIOS\tribugest\Notificaciones\2018\Emb_SS</p>
+<label class="container">"Llenar tabla "NOTFS_GTW_TABLA_NOTIFICACION" (Pide parámetro año)
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Aplicaciones de Gestión “Envío notificaciones Recaudación”
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</fieldset>
+
+<fieldset>
+<legend><h2>CARGAS COBROS C60</h2></legend>
+<p></p>
+<label class="container">Borrar FASE5 de los cobros del día anterior 
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Descargar movimientos y ficheros c60
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Verificac60 con su moviento y después cargar el fichero 
+   <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+ <p>\\cfiayto21\recaudacion_ficheros\VARIOS\cobros por banco\intermedia\C60TODOS</p>
+
+<label class="container">Ver registros de cada carga para añadir los errores en Fase4 y 5.
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Conciliar con Arqueos Caja Banco
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</fieldset>
+
+
+
+<fieldset>
+<legend><h2>CARGA SICER</h2></legend>
+<p></p>
+<label class="container">Descargar datos_sicer.aplinet@correos.com en X:\
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">GAN - 28010842-Recaudacion SICER - Acuses de recibo - Correos(Sicer) - Abierto - 201906
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Importar (imán) y después cerrar (carpeta) - Procesar
+   <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+ 
+
+<label class="container">Ver si en el fichero existen notificaciones de acumulación en la mdb
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<p>\\CFIAYTO21\Recaudacion_ficheros\z\SICER\SICER.mdb</p>
+  
+
+<label class="container">"Envios Sicer" - cargar X:\NT28010842....- si en aviso no hay acumulación FIN.
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">SI ACUMULACION, cargar fichero generado en 0068 - acumulacion
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<p>\\cfiayto21\recaudacion_ficheros\z\SICER\Acumulaciones\2019</p>
+<p>DFNT280108420063000000025-COLUMNA26</p>
+
+
+
+
+
+</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<title>CERTIFICADO NEGATIVO</title> 
+
+</head>
+ 
+<body>
+<div id="contenedor">
+<a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+<form id ="myform">
+<ul>
+<li>
+  <label class="titulo">DATOS DEL TITULAR</label><br>
+  
+  <div class="controles">
+
+
+    <span class="completo">
+      <input id="nombre" value="" />
+      <label>DEUDOR</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="dni" value="" />
+      <label>DNI / CIF</label>
+      <a id="alta" href="#">Pulsa para Validar</a>
+    </span>
+      
+      
+      
+   
+  </div>
+
+</li>
+</ul>
+</form>
+ 
+
+
+<header id="main-header">
+  
+    <a id="contacto" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc">28100 ALCOBENDAS</span></br>
+      <span class="site-desc">Tel.916510658</span></br>
+      <span class="site-desc">Fax.916540206</span>
+    </a> 
+
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header></br></br></br>
+
+<input type="text" name="valor1"  placeholder="ELIGE FIRMA" style="width: 600px;font-size: 1.05em;text-align:left;" onkeyup="fAgrega();"/><br>
+   <p> <select name="color1" style="margin-left:-5px;">
+    <option value="ELIGE FIRMA">ELIGE FIRMA</option>
+     <option value="NATALIA LÓPEZ SACRISTÁN">Recaudadora en funciones</option>
+     <option value="ISIDRO VALENZUELA VILLARRUBIA">Tesorero del Ayuntamiento de Alcobendas</option>
+    
+  </select></p>
+
+<p>Hago constar:</p><br>
+
+<p>Que según los antecedentes contables obrantes en la aplicación de ingresos de esta Recaudación Municipal, <b  id="nombre2"/></b>, con NIF/CIF - <b placeholder="NIF/CIF" id="dni2" /></b>, está al corriente en el pago de las liquidaciones/recibos emitidos a su nombre en concepto de impuestos, tasas o precios públicos municipales, gestionados por esta unidad recaudatoria.</p> 
+
+<p>La presente certificación no se hace extensiva a liquidaciones que se encuentren en periodo voluntario de pago ni a otras obligaciones exigibles pendientes de liquidar, por lo que no producirá los efectos de exención de responsabilidades a los que se refiere el articulo 175.2 de la Ley General Tributaria, para los supuestos de sucesión en la responsabilidad de pago de las deudas tributarias por adquisición de explotaciones o actividades económicas y herencia.</p>
+
+<h3 >Y para que conste a los efectos oportunos expido la presente certificación, en Alcobendas a <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>.</h3><br><br>
+
+
+  <input id="firmado" type="text" name="valor2"  style="font-size:1.05em;text-align: left;width:400px;">
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("select[name=color1]").change(function(){
+            
+            $('input[name=valor1]').val($(this).val());
+            $('input[name=valor2]').val("FDO. "+$(this).val());
+    
+  });
+});
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ARRIBA, ESTOS SE IRÁN INCORPORANDO AL TEXTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var nombre = $("#nombre");
+       var dni = $("#dni");
+       var form = $("#myform");
+       var alta = $("#alta");
+        
+      
+       nombre.blur(function(){
+       $("#nombre2").text($(this).val()).show();
+       });
+
+       dni.blur(function(){
+       $("#dni2").text($(this).val()).show();
+       
+       });
+
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+        
+   });
+
+
+</script>
+
+</body>
+</html>

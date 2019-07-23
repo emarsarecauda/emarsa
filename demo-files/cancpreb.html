@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<title>CANCELACIÓN PRECINTO</title> 
+
+</head>
+ 
+<body>
+<div id="contenedor">
+<a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+
+<form id ="myform">
+<ul>
+<li>
+  <label class="titulo">DATOS DEL TITULAR</label>
+  
+  <div class="controles">
+    <span class="completo">
+      <input id="exp" />
+      <label>EXPEDIENTE</label>
+    </span>
+
+    <span class="completo">
+      <input id="nombre" />
+      <label>DEUDOR</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="dni" />
+      <label>DNI / CIF</label>
+    </span>
+ 
+   <span class="completo">
+      <input id="date"  />
+      <label>FECHA DE EMBARGO</label>
+      <a id="alta" href="#">Pulsa para Validar</a>
+    </span>
+    
+  </div>
+
+</li>
+</ul>
+</form>
+ 
+
+
+
+
+<header id="main-header">
+     <a id="contacto" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc">28100 ALCOBENDAS</span></br>
+      <span class="site-desc">Tel.916510658</span></br>
+      <span class="site-desc">Fax.916540206</span>
+    </a> 
+    <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header><br>
+
+
+<strong>Expediente:</strong> <strong id="exp2"></strong><br>
+<strong>Deudor:</strong>    <strong id="nombre2"></strong><br>
+<strong>DNI/NIF:</strong> <strong id="dni2"></strong>
+<h2>MANDAMIENTO DE CANCELACION DE PRECINTO DE VEHICULOS</h2>  
+<h2>A la Jefatura Provincial de Tráfico de Madrid.</h2>
+
+
+<p>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas,</br>
+HAGO SABER: Que con fecha de hoy he dictado la siguiente resolución en el expediente que en ella misma se expresa:</p>
+<p id="cur"><b>“DILIGENCIA.-</b>  En el expediente administrativo de apremio seguido en esta Recaudación Municipal a nombre de <b id="nombre3"></b>, que dio lugar a la Diligencia de embargo de vehículos de fecha <b id="date2"></b>, se ha procedido a satisfacer el importe perseguido por lo que, de conformidad con lo establecido en el artículo 172.4 de la Ley 58/2003, General Tributaria, <b>PROCEDO A ALZAR EL EMBARGO Y PRECINTO</b> de los referidos bienes, que responden al siguiente detalle:</p>
+ 
+
+<fieldset  >
+<legend>MATRÍCULA</legend>
+<input  type="text" style="width:150px;">
+</fieldset>
+
+<fieldset >
+<legend>MARCA</legend>
+<input type="text" >
+</fieldset>
+
+<fieldset >
+<legend>MODELO</legend>
+<input type="text" >
+</fieldset>
+
+<fieldset >
+<legend>TIPO DE VEHÍCULO</legend>
+<input type="text" >
+</fieldset>
+
+<div id="cur">
+<p>Notifíquese al deudor así como al Registro de Bienes Muebles, Sección de Automóviles y otros Vehículos de Motor para la cancelación del embargo y, en su caso, a la Policía Local que corresponda para levantamiento del precinto y salida del vehículo antes detallado, todo ello en cumplimiento de lo dispuesto en los artículos 169.5 de la Ley 58/2003, General Tributaria, y 76.4 del Reglamento General de Recaudación (R.D. 939/2OOS, de 29 de julio)."</p>
+</div>
+ 
+ 
+
+<h4>EL TESORERO</h4>
+    <div id="desapareceDiv">
+    <img id="clic" img src="clic.jpg" height="150" width="250">
+    </div>
+<h3>Isidro Valenzuela Villarrubia</h3>
+
+
+ </div>
+
+
+ 
+
+
+ 
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ARRIBA, ESTOS SE IRÁN INCORPORANDO AL TEXTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var nombre = $("#nombre");
+       var dni = $("#dni");
+       var exp = $("#exp");
+       var date = $("#date");
+       var firma = $("#desapareceDiv");
+       var form = $("#myform");
+       var alta = $("#alta");
+       
+
+       nombre.blur(function(){
+       $("#nombre2").text($(this).val()).show();
+       $("#nombre3").text($(this).val()).show();
+       });
+
+       dni.blur(function(){
+       $("#dni2").text($(this).val()).show();
+       });
+
+       exp.blur(function(){
+       $("#exp2").text($(this).val()).show();
+       });
+
+       date.blur(function(){
+       $("#date2").text($(this).val()).show();
+       firma.css("display", "block");
+       });
+       
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+
+   });
+
+
+</script>
+
+
+
+    <script>
+        $('#clic').on({'click': function(){
+        $("#clic").attr('src', 'sello.jpg');
+  
+    }
+        });
+    </script>
+</html>

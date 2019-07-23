@@ -1,0 +1,160 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="iso-8859-1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="BaseHeaderContenedor.css">
+<title>PROVIDENCIA DE APREMIO INCUMPLIMIENTO EMBSS 1</title> 
+
+</head>
+ 
+<body>
+<div id="contenedor">
+<a href="javascript:window.print()" class="print-pdf" >IMPRIME EN PDF</a>
+<form id ="myform">
+<ul>
+<li>
+  <label class="titulo">DATOS DEL DEUDOR</label><br>
+  
+  <div class="controles">
+
+     <span class="completo">
+      <input id="exp" value="" />
+      <label>EXPEDIENTE</label>
+    </span>
+
+
+    <span class="completo">
+      <input id="nombre" value="" />
+      <label>RESPONSABLE SOLIDARIO</label>
+    </span>
+
+    <span class="completo">
+      <input id="dni" value="" />
+      <label>DNI / CIF</label>
+    </span>
+
+
+     <span class="completo">
+      <input id="datedev" value="" />
+      <label>Fecha de derivación</label>
+    </span>
+ 
+    <span class="completo">
+      <input id="importe" value="" />
+      <label>Importe por principal</label>
+    </span>
+
+    <a id="alta" href="#">Pulsa para Validar</a>
+    
+  </div>
+
+</li>
+</ul>
+</form>
+ 
+
+
+<header id="main-header" style="margin-top:50px;">
+  
+    <a id="contacto" >
+      <h2 >Recaudación Municipal</h2>
+      <span class="site-desc">PLAZA DEL PUEBLO,1</span></br>
+      <span class="site-desc">28100 ALCOBENDAS</span></br>
+      <span class="site-desc">Tel.916510658</span></br>
+      <span class="site-desc">Fax.916540206</span>
+    </a> 
+
+        <a id="logo-header">  <img src="logo.jpg"  height="120" width="240">    </a> 
+  </header></br>
+     <div id="referencia2">
+       <p>Expediente:<b id="exp2"></b></p>
+       <p>Responsable Solidario:<b id="nombre2"></b></p>
+       <p>DNI/CIF:<b id="dni2"></b></p>
+       <p>Concepto/s: Derivación responsabilidad de fecha <b id="datedev2"></b> según artículo 42.2, letra b) de la Ley 58/2003
+         General Tributaria.</p>
+       <p>Importe por principal:<b id="importe2"></b></p>
+      </div>
+      <br><br><br>
+
+ 
+    <strong>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas,</strong><br>
+
+    <p>HAGO CONSTAR: Que el deudor a que se refieren los anteriores datos ha dejado transcurrir el plazo reglamentario para el pago en período voluntario de la deuda expresada, según se le tenía requerido al darle traslado de la resolución por la que se le declaraba responsable de la deuda, habiendo finalizado el plazo mencionado el día <input class="placeholder"placeholder="FECHA" style="text-align: center;font-weight: bold;"/>.</p><br>
+
+    <p>Por lo que a la vista de lo anterior, procedo a dictar la siguiente:</p><br>
+
+    <p id="cur">“PROVIDENCIA.- Al haber finalizado, en la fecha que se indica, el plazo de ingreso en período voluntario, sin que los obligados al pago citados hayan satisfecho la deuda por los conceptos, importes y períodos que se detallan, se inició al día siguiente el período ejecutivo y el devengo de intereses de demora. Por ello, haciendo uso de la facultad que al efecto me confiere el artículo 5.3 (c) del Real Decreto 1174/87, de 18 de septiembre, y el artículo 70.3 del Reglamento General de Recaudación, y de conformidad con lo dispuesto en el artículo 167 de la Ley General Tributaria (LGT), dicto la presente PROVIDENCIA DE APREMIO, como título que lleva aparejada la ejecución, liquidando los recargos  a los que se refiere el artículo 28 de la LGT (recargo ejecutivo del 5% si la totalidad de la deuda se ingresa antes de la notificación de la providencia de apremio, recargo de apremio reducido del 10% cuando se ingrese la totalidad de la deuda y el propio recargo antes de la finalización del plazo previsto en el artículo 62.5 de la LGT para las deudas apremiadas, y recargo de apremio ordinario de 20% cuando no concurran las anteriores circunstancias), con requerimiento expreso para que efectúen el pago de la deuda, incluido el recargo de apremio reducido del 10%, en el plazo señalado en el artículo 62.5 de la LGT. De no efectuar el ingreso del importe total de la deuda pendiente en dicho plazo, se procederá al embargo de sus bienes y derechos o a la ejecución de las garantías existentes para su cobro con inclusión del recargo de apremio ordinario del 20% y de las costas e intereses de demora que se devenguen hasta la fecha de cancelación de la deuda.”</p>
+
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("select[name=color1]").change(function(){
+            
+            $('input[name=valor1]').val($(this).val());
+            $('input[name=valor2]').val("FDO. "+$(this).val());
+    
+  });
+});
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("INSTRUCCIONES.- COMPLETA LOS CAMPOS ARRIBA, ESTOS SE IRÁN INCORPORANDO AL TEXTO, SI TE EQUIVOCAS PULSA LA TECLA DE FUNCIÓN F5");
+      $('#myform')[0].reset();
+       var exp = $("#exp");
+       var nombre = $("#nombre");
+       var dni = $("#dni");
+       var importe = $("#importe");
+       var datedev = $("#datedev");
+       
+       var form = $("#myform");
+       var alta = $("#alta");
+        
+
+
+       exp.blur(function(){
+       $("#exp2").text($(this).val()).show();
+       });
+
+
+       nombre.blur(function(){
+       $("#nombre2").text($(this).val()).show();
+       });
+
+       dni.blur(function(){
+       $("#dni2").text($(this).val()).show();
+       });
+
+       datedev.blur(function(){
+       $("#datedev2").text($(this).val()).show();
+       })
+
+       importe.blur(function(){
+       $("#importe2").text($(this).val()).show();
+       });
+
+
+       alta.click(function(){
+       form.css("display", "none");
+       });
+
+        
+   });
+
+
+</script>
+
+
+
+</body>
+</html>

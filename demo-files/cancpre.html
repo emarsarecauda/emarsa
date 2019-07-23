@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet"href="combinar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <title>CANCELACIÓN</title>
+        <style>
+
+        body {
+
+        margin-left: 65px;
+      
+        }
+                #cur {
+        font-style: oblique;
+      
+        }
+
+       
+        #desapareceDiv {
+  
+            width: 300px;
+            height: 200px;
+        }
+  #car {
+  display: inline-block;
+  margin-left: 30px;
+    }
+#floatleft {
+    float:left;
+}
+
+
+
+        </style>
+
+    </head>
+                <div id="logo">
+<figure><img src="encabezado.jpg" alt=""></figure>
+</div>
+
+    <body>
+       
+
+<strong>Expediente:</strong> <input type="text" placeholder="EXPEDIENTE" onclick="resizeInput()" style="width: 100px;margin-left: 50px;text-align:left;"></strong><br>
+<strong>Deudor:</strong>    <input id="input1" type="text" placeholder="NOMBRE TITULAR" onclick="resizeInput()"style="width: 400px;margin-left: 94px;text-align:left;"/><br>
+<strong>DNI/NIF:</strong> <input type="text" placeholder="NIF/CIF" style="width: 100px;margin-left: 93px;text-align:left;" onclick="resizeInput()" />
+<h3 style="margin-left: 100px;">MANDAMIENTO DE CANCELACION DE PRECINTO DE VEHICULOS</h3>
+<h4>A la Jefatura Provincial de Tráfico de Madrid.</h4>
+<p>Isidro Valenzuela Villarrubia, Tesorero del Ayuntamiento de Alcobendas,</br>
+HAGO SABER: Que con fecha de hoy he dictado la siguiente resolución en el expediente que en ella misma se expresa:</p>
+<p id="cur"><strong>“DILIGENCIA.-</strong>  En el expediente administrativo de apremio seguido en esta Recaudación Municipal a nombre de <input id="input2" type="text" placeholder="NOMBRE TITULAR" onclick="resizeInput()"style="width: 400px;text-align:center;"/>, que dio lugar a la Diligencia de embargo de vehículos de fecha <input type="text"  placeholder="FECHA" style="text-align:center;min-width:50px;" onclick="resizeInput()" />, se ha procedido a satisfacer el importe perseguido por lo que, de conformidad con lo establecido en el artículo 172.4 de la Ley 58/2003, General Tributaria, <strong>PROCEDO A ALZAR EL EMBARGO Y PRECINTO</strong> de los referidos bienes, que responden al siguiente detalle:</p>
+
+
+<div id="car">
+<fieldset id="floatleft" >
+<legend>MATRÍCULA</legend>
+<input  type="text" style="width: 20px;">
+</fieldset>
+<fieldset id="floatleft">
+<legend>MARCA</legend>
+<input type="tel" style="width: 20px;">
+</fieldset>
+<fieldset id="floatleft">
+<legend>MODELO</legend>
+<input type="tel" style="width: 20px;">
+</fieldset>
+<fieldset id="floatleft">
+<legend>TIPO DE VEHÍCULO</legend>
+<input type="tel" style="width: 20px;">
+</fieldset>
+</div>
+<p id="cur">Notifíquese al deudor así como al Registro de Bienes Muebles, Sección de Automóviles y otros Vehículos de Motor para la cancelación del embargo y, en su caso, a la Policía Local que corresponda para levantamiento del precinto y salida del vehículo antes detallado, todo ello en cumplimiento de lo dispuesto en los artículos 169.5 de la Ley 58/2003, General Tributaria, y 76.4 del Reglamento General de Recaudación (R.D. 939/2OOS, de 29 de julio)."</p>
+
+
+
+
+<h4 >En Alcobendas a <script>
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("domingo","lunes","martes","miércoles","jueves","viernes","sábado");
+var f=new Date();
+document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+</script>.</h4>
+<h4>EL TESORERO</h4>
+    <div id="desapareceDiv">
+    <img id="clic" img src="clic.jpg" alt="">
+    </div>
+<h3>Isidro Valenzuela Villarrubia</h3>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#input1").keyup(function () {
+            var value = $(this).val();
+            $("#input2").val(value);
+            
+        });
+    });
+
+</script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+
+        $('#clic').on({'click': function(){
+        $("#clic").attr('src', 'firma.jpg');
+       
+    
+    }
+        });
+    </script>
+            
+    <script type="text/javascript">
+     function resizeInput() {
+    var valueLength = $(this).prop('value').length;
+     // Para que no arroje error si el input se vacía
+    if (valueLength > 0) {
+        $(this).prop('size', valueLength);
+      }
+    }
+    $('input[type="text"]').on('keyup', resizeInput).each(resizeInput);
+    </script>
+   
+    </body>
+</html>
