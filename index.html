@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/css3-text-animation.css">
+<link rel="stylesheet"  href="css\icomoon.css">
+<link rel="stylesheet"  href="css\desing.css">
+<link rel="stylesheet"  href="css\normalize.css">
+<link rel="stylesheet"  href="css\aldo.css">
+<link rel="stylesheet" href="style.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+<script src="js/modernizr-custom.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<!--El orden es importante se debe cargar 1 jQUERY-->
+<script type="text/javascript"  src="jquery-3.3.1.min.js">  </script>
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.min.css"> 
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.min.css"> 
+<script type="text/javascript"  src="jquery-ui-1.12.1/jquery-ui.min.js">  </script>
+<script type="text/javascript"  src="js/tabs.js">  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css">
+<script type="text/javascript"  src="js/bxslider.js">  </script>
+<script type="text/javascript"  src="js/theme.js">  </script>
+
+</head>
+
+
+
+<body>
+
+<header>
+  <ul>
+       <li><a class="active" onClick="navSection('home')" href="#">Inicio</a></li>
+       <li><a onClick="navSection('bancos')"href="#">Bancos</a></li>
+       <li><a onClick="navSection('arqueo')"href="#">Arqueo</a></li>
+       <li id="logo"><a href="#"><img src="img/logo.png" style="max-height: 200px; max-width: 200px;" /></a></li>
+       <li><a onClick="navSection('mail')"href="#">eMail</a></li>
+       <li><a onClick="navSection('agenda')"href="#">Agenda</a></li>
+       <li><a onClick="navSection('extensiones')"href="#">Extensiones</a></li>
+  </ul>
+</header>
+
+<section id="global">
+    <h1>Bienvenidos hoy es 
+            <script>
+            var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","  Diciembre");
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+            var f=new Date();
+            document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+            </script>
+            <div id="reloj">
+            <script type="text/javascript">
+             function startTime(){
+             today=new Date();
+             h=today.getHours();
+             m=today.getMinutes();
+             s=today.getSeconds();
+             m=checkTime(m);
+             s=checkTime(s);
+             document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+             t=setTimeout('startTime()',500);}
+             function checkTime(i)
+             {if (i<10) {i="0" + i;}return i;}
+             window.onload=function(){startTime();}
+             </script> 
+             </div>
+    </h1><br>
+    
+
+  <div id="slider">
+       <section class="slide" id="home" style="display:block">
+          <div id="particles-js"></div>
+          <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+          <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+          <script  src="js/index.js"></script>
+          <div class="sp-container">
+               <div class="sp-content">
+                 <div class="sp-globe"></div>
+                 <h2 class="frame-1"></h2>
+                 <h2 class="frame-2"></h2>
+                 <h2 class="frame-3"></h2>
+                 <h2 class="frame-4"></h2>
+                 <h2 class="frame-5">
+                   <span><a style="text-decoration:none;color:white;" id="none" target="_blank" href="https://www.alcobendas.org/es/portal.do?TR=C&IDR=1640">CALENDARIO</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span><a style="text-decoration:none;color:white;" target="_blank" href="https://smallpdf.com/es/unir-pdf" target="_">UNIR PDF</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span><a style="text-decoration:none;color:white;" target="_blank" href="https://portafirmas.alcobendas.org/pfirma/login/login.htm?back_to=/pfirma/" target="_">PORTAFIRMAS</a></span>
+                 </h2>
+                 <a class="sp-circle-link" target="_blank" href="http://intranet.nwcayto30.universo.local/default.asp">Intranet</a>
+               </div>
+             </div>
+          <script  src="js/textanimation.js"></script>
+
+       </section> <!--id="home"-->
+
+
+
+       <section class="slide" id="bancos" style="display:none">
+         <div id ="pestanas">
+           <ul>
+             <li><a href="#tabs-1">BBVA</a></li>
+             <li><a href="#tabs-2">BANKIA</a></li>
+             <li><a href="#tabs-3">LACAIXA</a></li>
+             <li><a href="#tabs-4">CAJAMAR</a></li>
+             <li><a href="#tabs-5">IBERCAJA</a></li>
+             <li><a href="#tabs-6">BSCH</a></li>
+           </ul>
+           <div id="tabs-1"><a target="_blank" href="https://www.bbvanetcash.com/local_kyop/KYOPSolicitarCredenciales.html" class= "link1">ENTRA</a><h9> ES79-0182-0190-81-0010289990 .</h9><h7>20115900</h7><h9>.</h9><h7>AYTO2005</h7><h9>.</h9><h7>10111011</h7><h9>.</h9></div>
+           <div id="tabs-2"><a target="_blank" href="https://oficinaempresas.bankia.es/es/login.html" class= "link1">ENTRA</a><h9> ES09-2038-2214-32-6900000377 .</h9><h7>2309094108900</h7><h9>.</h9><h7>57107103</h7><h9>.</h9></div>
+           <div id="tabs-3"><a target="_blank" href="https://www.caixabank.es/particular/home/particulares_es.html" class= "link1"> ENTRA</a><h9> ES52-2100-2141-73-0200119421 .</h9><h7>80472988</h7><h9>.</h9><h7>64046404</h7><h9>.</h9></div>
+           <div id="tabs-4"><a target="_blank" href="https://www.cajamar.es/es/empresas/" class= "link1">ENTRA</a><h9> ES54-3058-1910-68-2732000025 .</h9><h7>24974343</h7><h9>.</h9><H7>CI10111011</h7><h9>.</h9></div>
+           <div id="tabs-5"><a target="_blank" href="https://www1.ibercajadirecto.com/ibercaja/asp/Login.asp" class= "link1">ENTRA</a><h9> ES24-2085-9271-01-0400800189 .</h9>     <h7>3297245070807M</h7><h9>.</h9><h7>101156</h7><h9>.</h9></div>
+           <div id="tabs-6"><a target="_blank" href="https://empresas3.gruposantander.es/Estatico/BEComponentesGeneralesAccesoSEI/Html/LoginNuevo.html?_ga=2.103596160.1808607813.1538991640-638986746.1497428885" class= "link1">ENTRA</a><h9> ES16-0049-5176-14-2616840859 .</h9><h7>P2800600E</h7><h9>.</h9><h7>I5167W171520</h7><h9>.</h9><h7>B8M4Y6TZ</h7><h9>.</h9></div>
+      
+       </div>
+         
+       </section> <!--id="bancos"-->
+
+
+
+
+
+       <section class="slide" id="arqueo" style="display:none">
+         
+    <fieldset>
+        <legend>CALCULAR ARQUEO</legend>
+    
+             <form id="bbva"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2) ">
+              <input type="reset" value="">                        
+              <input  id="valor1" type="number"  step="any" placeholder="BBVA-990&nbsp;BANCO"> -
+            <input id="valor2" type="number"   step="any" placeholder="BBVA-990&nbsp;GTWIN"> =
+            <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BBVA-ES79-0182-0190-81-0010289990
+
+        </form>
+        <form id="bankia560"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+          <i class="fas fa-trash-alt"></i><input type="reset" value="">
+            <input  id="valor1" type="number" step="any" placeholder="BANKIA-560&nbsp;BANCO"> -
+            <input id="valor2" type="number" step="any" placeholder="BANKIA-560&nbsp;GTWIN"> =
+            <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANKIA-ES40-2038-2214-31-6000580560
+ 
+         </form>
+         <form id="bankia"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+           <input type="reset" value="">
+          <input  id="valor1" type="number" step="any" placeholder="BANKIA-377&nbsp;BANCO"> -
+             <input id="valor2" type="number" step="any" placeholder="BANKIA-377&nbsp;GTWIN"> =
+             <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANKIA-ES09-2038-2214-32-6900000377 
+
+         </form>
+
+         <form   id="caixa" method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+           <input type="reset" value="">
+             <input  id="valor1" type="number" step="any" placeholder="LACAIXA-421&nbsp;BANCO"> -
+             <input id="valor2" type="number" step="any" placeholder="LACAIXA-421&nbsp;GTWIN"> =
+             <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LACAIXA-ES52-2100-2141-73-0200119421
+
+        </form>
+        <form id="CAJAMAR"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)"> 
+          <input type="reset" value="">
+           <input  id="valor1" type="number" step="any" placeholder="CAJAMAR-025&nbsp;BANCO"> -
+            <input id="valor2" type="number" step="any" placeholder="CAJAMAR-025&nbsp;GTWIN"> =
+            <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAJAMAR-ES54-3058-1910-68-2732000025
+ 
+        </form>
+        <form id="ibercaja"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+          <input type="reset" value="">
+            <input  id="valor1" type="number" step="any" placeholder="IBERCAJA-189&nbsp;BANCO"> -
+            <input id="valor2" type="number" step="any" placeholder="IBERCAJA-189&nbsp;GTWIN"> =
+            <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBERCAJA-ES24-2085-9271-01-0400800189
+
+       </form>
+       <form id="popular"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+         <input type="reset" value="">
+          <input  id="valor1" type="number" step="any" placeholder="POPULAR-237&nbsp;BANCO"> -
+           <input id="valor2" type="number" step="any" placeholder="POPULAR-237&nbsp;GTWIN"> =
+           <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POPULAR-ES17-0075-1084-11-0630000237
+
+       </form>
+       <form id="bsch"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+         <input type="reset" value="">
+           <input  id="valor1" type="number" step="any" placeholder="BSCH-867&nbsp;BANCO"> -
+           <input id="valor2" type="number" step="any" placeholder="BSCH-867&nbsp;GTWIN"> =
+           <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSCH-ES73-0049-5176-16-2416840867 
+
+         </form>
+         <form id="bsch"  method="POST" onsubmit="return false" oninput="o.value = (valor1.valueAsNumber - valor2.valueAsNumber).toFixed(2)">
+           <input type="reset" value="">
+             <input  id="valor1" type="number" step="any" placeholder="BSCH-859&nbsp;BANCO"> -
+             <input id="valor2" type="number" step="any" placeholder="BSCH-859&nbsp;GTWIN"> =
+             <output id="resultado" name="o" for="valor1 valor2"></output>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BSCH-ES16-0049-5176-14-2616840859
+
+
+             <br><br>
+            <fieldset>
+            <legend>CALCULAR EMBARGO NÓMINA</legend>
+            <form> 
+            <input type="reset" value="">
+            <input id="valor">
+            <input  type="submit" value="Calcular Retención" onclick="calcularN();" >
+            <span id="result"></span></p>
+            </form> 
+            </fieldset>
+
+       </section> <!--id="arqueo"-->
+
+
+
+
+       <section class="slide" id="mail" style="display:none">
+         <h2>Antes de emitir una respuesta solicitar acreditación de la siguiente manera:</h2>
+         <p>Buenos días,<br>le informamos que para atender su solicitud es necesario que adjunte copia del D.N.I.,
+         N.I.E o pasaporte, si es el titular del recibo, en caso de que no lo sea, es necesario que
+         adjunte DNI del interesado, DNI del representante y autorización del titular. Si el interesado es una Persona Jurídica adjunte CIF de la Persona Jurídica, DNI del representante legal y poder de representación.</p>
+
+         <div id ="mailtabs">
+            <ul>
+              <li><a href="#tabs-1">Forma de pago</a></li>
+              <li><a href="#tabs-2">Embargo SS</a></li>
+              <li><a href="#tabs-3">Domiciliación</a></li>
+              <li><a href="#tabs-4">Enlaces-Trámites</a></li>
+              <li><a href="#tabs-5">Justificantes-Certificados</a></li>
+              <li><a href="#tabs-6">Notificaciones</a></li>
+              <li><a href="#tabs-7">CONTACTOS</a></li>
+              <li><a href="#tabs-8">RECURSOS</a></li>
+            </ul>
+
+            <div id="tabs-1">
+               <h8>
+               <p>se adjunta carta de pago que puede imprimir y hacer efectiva en cualquier sucursal de Bankia o Banco Santander., el nº IBAN para pago por transferencia es <strong>ES73 0049-5176-1624-1684-0867</strong>,indicar como concepto DNI/CIF del titular y nº de expediente si tiene.</p><br>
+              <p>se adjunta copia de la notificación con la que puede efectuar el pago en cualquier oficina Bankia o BSCH.</p><br>
+              <p>el recibo está incluido en un expediente en vía ejecutiva, y la Ley General Tributaria indica que se debe aplicar el pago a la deuda más antigua, por lo tanto no se puede extraer individualmente. Se adjunta carta de pago.</p><br>
+              <p>Si dispone de tarjeta de Alcobendas , e-dni o cualquier otro certificado electrónico válido  (FNMT, ACCV, CatCert, Izenpe y Camerfirma)puede realizarlo   en el siguiente link:</p>
+              <a href="https://www.alcobendas.org/es/portal.do?TR=C&IDR=2433">https://www.alcobendas.org/es/portal.do?TR=C&IDR=2433</a>
+            </h8>
+            </div>
+
+
+            <div id="tabs-2" >
+              <h8>
+             <p>se precisa copia de documento que acredite que no llega al SMI, dos últimas nóminas o TC2. </p><br>
+               <p>se precisa copia de la baja.</p><br>
+               <p>el nº IBAN para pago por transferencia es  <strong>ES54 3058 1910 6827 3200 0025</strong>, indicar como concepto DNI/CIF del trabajador y nº de Expediente.</p><br>
+               <p>para poder poder alzar el embargo la única manera es que usted no tuviera ingresos o estos fueran de una pensión mínima o un salario inferior al mínimo interprofesional. Para poder acreditarlo se necesita un justificante de los movimientos de los dos últimos meses.</p>
+             </h8>
+            </div>
+
+
+            <div id="tabs-3">
+              <h8>
+              <p>Se pone en copia a domiciliaciones para grabar el número de cuenta para el       próximo ejercicio.</p><br>
+              <p>para domiciliar o modificar domiciliación, ha de cumplimentar formulario     adjunto junto con una copia del D.N.I.,N.I.E o pasaporte, si es una Persona Jurídica adjunte CIF de la Persona Jurídica, DNI del representante legal y poder de representación y enviar a  <a href="domiciliaciones@aytoalcobendas.org%0D">domiciliaciones@aytoalcobendas.org</a></p><br>
+             <p>se adjunta recibo y se pone en copia a <a href="domiciliaciones@aytoalcobendas.org%0D">domiciliaciones@aytoalcobendas.org</a> para que tramiten su solicitud.</p>
+            </h8>
+            </div>
+
+
+            <div id="tabs-4">
+            <h8>
+             <p><a href="https://www.correos.es/ss/Satellite/site/pagina-inicio/info">OFICINA VIRTUAL CORREOS</a></p><br>
+             <p>pagos sin identificación digital con tarjeta, en el siguiente enlace indicando NIF/CIF y nº de recibo:<a href="https://www.alcobendas.org/es/portal.do?IDM=126&NM=3">https://www.alcobendas.org/es/portal.do?IDM=126&NM=3</a></p><br>
+             <p>Simulador IVTM :<a href="https://www.alcobendas.org/es/portal.do?IDM=130&NM=3">SIMULAR</a></p><br>
+             <p>únicamente figura deuda en situación de ejecutiva a nombre de:</p><br>
+             <p>conciliado con extracto bancario, borro las cargas y archivo en Intercolabora.\\AYTO21INFO402\InterColabora\Cjlia Economía, Hacienda, Contratación, Compras y RRHH\Tesoreria\ARQUEOS\2019\</p>
+           </h8>
+            </div>
+     
+
+            <div id="tabs-5">
+            <h8>
+             <p>se adjunta justificante del 201, y del 201 certificado de estar acogido al plan de pago Aplaza 6 que finalizó en el més de octubre, y debido a que existen cincuenta días para ordenar devoluciones no se          contabiliza hasta diciembre. Se puede solicitar  a partir de entonces.</p><br>
+             <p>certificado del pago de impuestos y tasas municipales a través del siguiente link :<A href="https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=212">https://www.alcobendas.        org/es/cargarFichaTramite.do?identificador=212</a></p><br>
+             <p>para obtener copia de años anteriores (excepto el inmediato anterior) debe abonar una tasa de 19,60 en las oficinas del Servicio de Atención Ciudadana. La obtención de manera telemática es GRATUITA en el         siguinte link: <A href="https://www.alcobendas.org/es/portal.do?IDM=154&NM=3">https://www.alcobendas.org/es/portal.do?IDM=154&NM=3</A></p><br>
+             <p>puede solicitar un certificado negativo de deudas a través del siguiente link:<a href="https://www.alcobendas.org/es/cargarFichaTramite.do?identificador=147">https://www.alcobendas.        org/es/cargarFichaTramite.do?identificador=147</a></p>
+           </h8>
+            </div>
+
+
+            <div id="tabs-6">
+            <h8>
+             <p>en los tributos de cobro periódico no existe obligación de notificación individual, podrán notificarse colectivamente las sucesivas liquidaciones mediante edictos que así lo adviertan.</p><br>
+             La modificación de domicilio a efecto de notificaciones se puede realizar de las siguientes formas:
+            <ol>
+              <li>TELEMÁTICA</li>
+              Si dispone de certificado digital válido, (emitido por las entidades acreditadas de certificación)¸de DNI electrónico;  o de la “Tarjeta de Alcobendas”,  a     través de la Oficina Tributaria Virtual del Ayuntamiento de Alcobendas (OTVA), en la dirección web : www.alcobendas.org.<br>
+              Para personas jurídicas, a través de la plataforma NOTIFIC@.
+              <li>PRESENCIAL: OFICINAS DEL SERVICIO DE ATENCIÓN CIUDADANA (SAC)</li>
+              Oficina en el Ayuntamiento de Alcobendas
+              Plaza Mayor, 1 <br>
+              HORARIO:<br>
+              -   De lunes a viernes de 8:30 a 14:30 y de 16:00 a 19:00.<br>
+              -   Sábados: primer y tercer sábado del mes de 10 a 13h. (sólo para trámites del Ayto. Alcobendas)<br>
+              -    julio y agosto: tardes y sábados cerrado<br>
+              -    Semana Santa: sábado cerrado<br>
+              Navidad: tardes cerrado<br>
+               Oficinas en centros cívicos<br>
+               •           Distrito Centro (Pza. Pueblo, 1)<br>
+               •           Distrito Urbanizaciones (Av. Bruselas, 19)<br>
+               •           Distrito Norte (Av. de la Magia, 4)<br>
+               HORARIO:<br>
+               -     de lunes a viernes, de 8:30 a 14H.<br>
+               -     Julio y agosto permanecen cerrados.<br>
+              <li>POR CORREO POSTAL</li>
+              <li>POR ORVE</li>
+            </h8>
+            </div>
+
+
+            <div id="tabs-7">
+            <h8>
+             <p>fax.nºfax@fax.vodafone.es</p><br>
+             <p>fax.916540206@fax.vodafone.es<em>(Recaudación)</em></p><br>
+             <p>la anulación o el cambio de titularidad del recibo es dependencia del departamento de IBI 916597600 o tramitesweb.ibi@aytoalcobendas.org</p><br>
+             <p>para consultar expediente sancionador y/o notificaciones en periodo voluntario contacte con departamento de multas 914904070, trafico@aytoalcobendas.org</p>
+             <p>departamento de rentas, tramitesweb.rentas@aytoalcobendas.org</p>
+             </h8>
+            </div>
+
+            <div id="tabs-8">
+            <h8>
+             <p>Los recursos, escritos y comunicaciones que los ciudadanos dirijan a los órganos de las Administraciones Públicas podrán presentarse: <p>
+              <ol>
+              <li>TELEMÁTICA</li>
+               Si dispone de certificado digital válido, (emitido por las entidades acreditadas de certificación)¸de DNI electrónico;  o de la “Tarjeta de Alcobendas”,  a      través de la Oficina Tributaria Virtual del Ayuntamiento de Alcobendas (OTVA), en la dirección web : www.alcobendas.org.<br>
+               pulsando en la pestaña OTVA-SOLICITUDES TRIBUTARIAS - MAS TRAMITES TRIBUTARIOS - OTROS - PRESENTACION RECURSOS REPOSICION, o bien SOLICITUD COMPENSACIÓN. 
+               Para personas jurídicas, a través de la plataforma NOTIFIC@.
+              <li>PRESENCIAL: OFICINAS DEL SERVICIO DE ATENCIÓN CIUDADANA (SAC)</li>
+               Oficina en el Ayuntamiento de Alcobendas
+               Plaza Mayor, 1 <br>
+               HORARIO:<br>
+               -   De lunes a viernes de 8:30 a 14:30 y de 16:00 a 19:00.<br>
+               -   Sábados: primer y tercer sábado del mes de 10 a 13h. (sólo para trámites del Ayto. Alcobendas)<br>
+               -    julio y agosto: tardes y sábados cerrado<br>
+               -    Semana Santa: sábado cerrado<br>
+               Navidad: tardes cerrado<br>
+               Oficinas en centros cívicos<br>
+               •           Distrito Centro (Pza. Pueblo, 1)<br>
+               •           Distrito Urbanizaciones (Av. Bruselas, 19)<br>
+               •           Distrito Norte (Av. de la Magia, 4)<br>
+               HORARIO:<br>
+               -     de lunes a viernes, de 8:30 a 14H.<br>
+               -     Julio y agosto permanecen cerrados.<br>
+              <li>POR CORREO POSTAL</li>
+              <li>POR ORVE</li>
+              </h8>
+             </div>
+
+                
+         </div>
+          
+       </section> <!--id="mail"-->
+
+
+
+
+
+       <section class="slide" id="agenda" style="display:none">
+         <div class="googleCalendar">
+         <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=emarsaalcobendas%40gmail.com&amp;color=%23333333&amp;src=vuflr3oc9fa39e6cnmj630vh1s%40group.calendar.google.com&amp;color=white&amp;ctz=Europe%2FMadrid" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+         </div>
+         <br> <br> 
+         <div class="googleSheet">
+         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS8kNRogHETzNfa_UOtrAPyLXXk-2lWdvld0dh7Dh_dXdoJWSDjKRQatmX9JlLT6c-EuyvXMnpFHfLo/pubhtml?gid=0&amp; single=true&amp;widget=true&amp;headers=false" height="600" width="100%" style="display:block;"></iframe>
+         </div> 
+       </section> <!--id="agenda"-->
+
+
+
+        <section class="slide" id="extensiones" style="display:none">
+         <div id ="phone">
+            <ul>
+             <li><a href="#tabs-1">RECAUDACION</a></li>
+             <li><a href="#tabs-2">TESORERIA</a></li>
+             <li><a href="#tabs-3">CONTABILIDAD</a></li>
+             <li><a href="#tabs-4">RENTAS</a></li>
+             <li><a href="#tabs-5">PLUSVALIA</a></li>
+             <li><a href="#tabs-6">IBI</a></li>
+           </ul>
+           <div id="tabs-1">
+            <h3>
+               <ol>
+               <li ><h7>16104</h7> BELTRAN </li><br>
+               <li ><h7>16110</h7> ENRIQUE </li><br>
+               <li ><h7>16107</h7> FERNANDO </li><br>
+               <li ><h7>16105</h7> NATIVIDAD </li><br>
+               <li ><h7>16115</h7> FEDERICO </li><br>
+               <li ><h7>16106</h7> ANA BELEN </li><br>
+               <li ><h7>16113</h7> ALVAREZ </li><br>
+               <li ><h7>16120</h7> ISMAEL </li><br>
+               <li ><h7>16112</h7> MÓNICA </li><br>
+               <li ><h7>16108</h7> JOSE MARIA </li><br>
+               <li ><h7>16101</h7> MARISOL </li><br>      
+               <li ><h7>16102</h7> VICTOR </li><br>
+               <li ><h7>16109</h7> MARIA </li><br>
+               <li ><h7>16103</h7> ANA ANGUITA </li><br>
+            </ol>
+            </h3>
+          </div>
+
+          <div id="tabs-2">
+            <h3>
+            <ul>
+              <li ><h7> 2275</h7> NATALIA </li><br>
+              <li ><h7> 2620</h7> GUILLERMO </li>
+            </ul>
+          </h3>
+          </div>
+
+          <div id="tabs-3">
+            <h3>
+            <ul>
+              <li ><h7> 2129</h7> CHELO </li> <br>
+              <li ><h7> 2139</h7> CHUS </li> <br>
+              <li ><h7> 2242</h7> E.OCAÑA </li> 
+            </ul>
+          </h3>
+          </div>
+
+          <div id="tabs-4">
+          <h3>
+          <ul>
+          <li ><h7> 2155</h7> ELENA CARRASCO </li> <br> 
+          <li ><h7> 2158</h7> Mª CASTRO </li> <br> 
+          <li ><h7> 2179</h7> EMPERATRIZ </li>
+          </ul>
+        </h3>
+         </div>
+
+         <div id="tabs-5">
+           <h3>
+           <ul>
+           <li ><h7> 2173</h7> TOÑI SEDANO </li>
+          </ul>
+        </h3>
+         </div>
+
+
+         <div id="tabs-6">
+           <h3>
+           <ul>
+             <li ><h7> 2166</h7> ANDRES</li> <br>
+             <li ><h7> 2184</h7> JOSE LUIS  </li> <br>
+             <li ><h7> 2186</h7> IGNACIO </li> 
+           </ul>
+         </h3>
+         </div>
+     
+       
+       </div><!--id="phone"-->
+        
+       </section> <!--id="agenda"-->
+
+
+        
+
+
+
+
+
+
+
+
+
+
+ </div> <!id="slider"-->
+</section><!--id="global"-->
+
+
+
+<footer>
+       
+        <div class="rrss">
+           <a target="_blank" href="http://mega.nwcayto30.universo.local/A140226_ASP_01/AplicacionesGestion.aspx" title="Aplicaciones"><img src="ICONS/146-wrench.png" height="40" width="40"/></a>
+           <a target="_blank" href="https://mail.aytoalcobendas.org" title="Correo Interno"><img src="ICONS/envelop.png" height="40" width="40"/></a>
+           <a target="_blank" href="http://www.seg-social.es/wps/portal/wss/internet/CalendarioLaboral/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zijQw9TTxMDAx9Lcy9nA0c_Xw8TJydDYDAXD8cVYGBgbOpgWOQpbtPcFiwoYGFsX4UMfoNcABHA8L6o1CVYHEBWAEeK4JTi_ULckMjDLJMFAGswVQW/#" title="Calendario laboral"><img src="ICONS/calendar.png" height="40" width="40"/></a>
+           <a target="_blank" href="file:///R:/ESCANER/ENTRADAS_SALIDAS/" title="ENTRADAS/SALIDAS DE CI"><img src="ICONS/file-pdf.png" height="40" width="40"/></a>
+           <a target="_blank" href="https://sdp.alcobendas.org/HomePage.do" title="Incidencias CAU"><img src="ICONS/phone.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/formivtm.html" title="Certificado Aplaza IVTM"><img src="ICONS/truck.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/formibi.html" title="Certificado Aplaza IBI"><img src="ICONS/office.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/aplazamiento.html" title="Formulario Aplazamiento"><img src="ICONS/file-text.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/ci.html" title="Comunicado Interior"><img src="ICONS/drawer.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/cerneg.html" title="Certificado Negativo"><img src="ICONS/user-check.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/cancpreb.html" title="Cancelación Precinto"><img src="ICONS/unlocked.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/embcaja.html" title="Embargo Recaudación Diaria"><img src="ICONS/coin-euro.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/notif.html" title="Notificación Responsable Solidario 2"><img src="ICONS/file-word.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/notifgen.html" title="Notificación Responsable Solidario 1"><img src="ICONS/file-text2.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/notiEmpty.html" title="Notificación Electrónica Vacía"><img src="ICONS/file-empty.png" height="40" width="40"/></a>
+           <a target="_blank" href="./demo-files/SeguimientodeProcesos.html" title="Procesos Recaudación"><img src="ICONS/filter.png" height="40" width="40"/></a>
+           <a target="_blank" href="http://man370reca204/login_registro/registrate.php" title="Registro de Llamadas"><img src="ICONS/address-book.png" height="40" width="40"/></a>
+           <!--<a href="#"><img src="ICONS/388-mail.png" height="86" width="108"/><span>one</span></a>-->
+           <br><br>
+           <p>2019 all rights reserved | Privacity Policy | ® Víctor José Martínez Corral </p>
+        </div>
+
+    
+</footer> 
+
+
+<script>                            
+function navSection(nav){
+   
+var section = new Array(6);
+ section[0] = "home";
+ section[1] = "bancos";
+ section[2] = "arqueo";
+ section[3] = "mail";
+ section[4] = "agenda";
+ section[5] = "extensiones";
+   
+ var search;
+ var show;
+for (var i=0;  i<6; i++) { 
+     search = document.getElementById(section[i]);
+     search.style.display ="none"; //oculta todas las seciones
+     if (section[i] == nav) { 
+      search.style.display = "block";
+      }<!-- //del if -->
+    }  <!-- //del for -->
+ }<!-- //del function -->
+</script>  
+
+
+
+
+
+</body>
+</html>
