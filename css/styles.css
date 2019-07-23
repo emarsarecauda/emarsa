@@ -296,7 +296,7 @@ top: 5px;
 font-family: 'icomoon';
 }
 /*ESTE SOLO SE APLICA AL 1ER ENLACE*/
-/*.rrss a:nth-child(1):before{   
+.rrss a:nth-child(1):before{   
   content: "\e991";
 }
 
@@ -358,7 +358,7 @@ font-family: 'icomoon';
 }
 .rrss a:nth-child(17):before{ 
   content: "\e944";
-}*/
+}
 
 
 #arriba{
